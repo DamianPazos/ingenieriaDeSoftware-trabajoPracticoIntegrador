@@ -32,3 +32,79 @@ button {
     padding: 10px;
     border: none;
 }
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #EADBC8;
+    padding: 20px;
+    position: relative;
+}
+
+/* Botón menú hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none; /* Oculto en pantallas grandes */
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5A4F45;
+    font-size: 18px;
+}
+
+/* Estilo Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+    }
+
+    nav {
+        
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #F5E1DA;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
