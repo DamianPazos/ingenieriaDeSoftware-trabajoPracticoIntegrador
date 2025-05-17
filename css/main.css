@@ -78,6 +78,16 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Pantalla PC */
+@media (min-width: 769px) {
+    #navMenu {
+        display: block; /* Asegura que el menú sea visible */
+    }
+
+    .menu-toggle {
+        display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+    }
+} 
 /* Estilo Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -108,3 +118,50 @@ nav ul li a {
     display: none;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li > span {
+    cursor: default;
+    padding: 10px;
+    display: block;
+    background-color: #f4f4f4;
+}
+
+nav ul li > span:hover {
+    background-color: #ddd;
+}
+
+nav ul .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul li:hover > .submenu {
+    display: block;
+}
+
+nav ul .submenu li {
+    padding: 10px;
+}
+
+nav ul .submenu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul .submenu li a:hover {
+    background-color: #ddd;
+}
