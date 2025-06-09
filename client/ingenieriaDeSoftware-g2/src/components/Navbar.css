@@ -1,0 +1,91 @@
+/* Reinicio básico del body para eliminar márgenes predeterminados */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor principal del Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a2a;  /* Fondo oscuro */
+    color: #ffffff;             /* Texto blanco */
+    padding: 0.5rem 0rem;
+    width: 100%;                /* Asegura el ancho completo */
+    position: fixed;            /* Fija el navbar en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;              /* Lo mantiene por encima de otros elementos */
+  }  
+  
+  /* Sección izquierda: nombre o logo */
+  .navbar__left h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  /* Sección central: menú de navegación */
+  .navbar__center .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar__center .nav-links li {
+    margin: 0 0.75rem;
+  }
+  
+  .navbar__center .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar__center .nav-links li a:hover {
+    color: #b3b3b3;
+  }
+  
+/* Sección derecha: íconos envueltos en links */
+.navbar__right a {
+    margin-left: 0.75rem; /* Ajusta este valor para mayor o menor distancia */
+    margin-right: 0.75rem; /* Ajusta este valor para mayor o menor distancia */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #ffffff; /* Color del icono */
+    text-decoration: none;
+  }
+  
+  .navbar__right a:hover {
+    color: #b3b3b3;
+  }
+  
+  /* Estilos Responsive: cuando la pantalla sea menor a 768px */
+  @media (max-width: 768px) {
+    /* Se organiza en columna para mayor legibilidad */
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Menu central ocupa todo el ancho y se centra */
+    .navbar__center {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  
+    .navbar__center .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    /* Ajuste en la sección derecha */
+    .navbar__right {
+      align-self: flex-end;
+      margin-top: 0.5rem;
+    }
+  }
