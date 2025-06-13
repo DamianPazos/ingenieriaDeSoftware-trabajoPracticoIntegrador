@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   host: process.env.DB_HOST,      // Ej.: localhost
   user: process.env.DB_USER,      // Tu usuario de MySQL
   password: process.env.DB_PASSWORD,  // Tu contraseña
-  database: process.env.DB_NAME       // Base de datos a utilizar (ej.: tienda_mvc)
+  database: process.env.DB_NAME       // Base de datos a utilizar
 });
 
 connection.connect((err) => {
