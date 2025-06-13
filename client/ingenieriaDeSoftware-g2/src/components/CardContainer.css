@@ -1,0 +1,17 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .dropdown {
+    padding: 5px;
+    font-size: 16px;
+  }
