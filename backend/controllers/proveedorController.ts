@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import * as proveedorModel from '../models/proveedorModel';
+import { parse } from 'path';
 
 export const createProveedor = (req: Request, res: Response): void => {
     const { nombre, email, telefono, direccion } = req.body;
@@ -24,4 +25,24 @@ export const createProveedor = (req: Request, res: Response): void => {
         };
     }
     );
+};
+
+export const getProveedorById = (req: Request, res: Response): void => {
+    const {id} = req.params;
+    // Validar que el ID sea un número
+    const idProveedor = parseInt(id, 10);
+    if (!idProveedor || isNaN(Number(idProveedor))) {
+        res.status(400).json({ error: 'ID de proveedor inválido' });
+        return;
+    };
+
+    proveedorModel.getProveedorById(Number(idProveedor), (err, results) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+        } else if (results.length === 0) {
+            res.status(404).json({ error: 'Proveedor no encontrado' });
+        } else {
+            res.json(results[0]);
+        }
+    });
 };

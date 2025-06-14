@@ -28,3 +28,17 @@ export const createProveedor = (
         callback(null, result);
     });
 };
+
+export const getProveedorById = ( idProveedor: number, callback: (err: any, results: any) => void): void => {
+    const query = `SELECT * FROM proveedores WHERE idProveedor = ?`;
+
+    db.query(query, [idProveedor], (err, results) => {
+        if (err) {
+            return callback(err, null);
+        }
+        if (!results) {
+            return callback(new Error('Proveedor no encontrado'), null);
+        }
+        callback(null, results);
+    });
+}
