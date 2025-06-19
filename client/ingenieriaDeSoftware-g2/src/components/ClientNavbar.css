@@ -1,0 +1,76 @@
+/* Contenedor principal del Client Navbar */
+.client-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #333333; /* Texto oscuro */
+  padding: 10px 0px; /* ancho y alto del navbar */
+  width: 100%;
+  position: fixed; /* Fija el navbar en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sección izquierda: logo */
+.client-navbar__left {
+  display: flex; 
+  align-items: center; /* Centra verticalmente el logo dentro de este div */
+}
+
+.client-navbar__logo-img { /* Estilo de la imagen del logo */
+  height: 100px; /* Ajusta el tamaño del logo*/
+}
+
+/* Sección de navegación a la derecha */
+.client-navbar__right {
+    display: flex;
+    align-items: center;
+}
+
+.client-navbar__right .nav-links {
+  list-style: none;
+  padding: 2%;
+  margin: 0;
+  display: flex;
+  gap: 35px; /* Reduce un poco el espacio entre los enlaces */
+}
+
+.client-navbar__right .nav-links li a {
+  color: #333333; /* Color oscuro para los enlaces */
+  text-decoration: none;
+  font-size: 1em; /* Ajusta el tamaño de la fuente de los enlaces */
+  font-weight: bold; /* Negrita */
+  transition: color 0.3s ease;
+}
+
+.client-navbar__right .nav-links li a:hover {
+  color: #52210e; /* Color café para el hover */
+}
+
+/* Estilos Responsive*/
+@media (max-width: 768px) {
+  .client-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .client-navbar__left {
+    margin-bottom: 10px;
+  }
+
+  .client-navbar__right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .client-navbar__right .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Reduce el espacio entre enlaces en móvil */
+  }
+}

@@ -1,0 +1,85 @@
+.hero-section {
+  position: relative;
+  width: 80vw;
+  min-height: calc(100vh - 70px); /* Ajusta la altura para que se vea similar a la imagen */
+  background-color: #00704A; /* Color verde oscuro de fondo */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  text-align: left; 
+  /*padding-left: 80px;*/
+  overflow: hidden;
+}
+
+
+
+.hero-coffee-image { /* Estilos para la imagen de la taza de café */
+  left: 0; 
+  position: absolute;
+  width: 50%;
+  object-fit: contain;
+  height: 400px; 
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-coffee-image {
+    height: auto; /* Altura automática */
+    max-width: 80%; /* La imagen en modo movil */
+    /* ajustar también el width para móviles */
+    /* width: 250px; */
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding-left: 750px; /*ajustar posicion de texto*/ 
+}
+
+.hero-content h1 {
+  font-size: 6.5em; /* Ajusta el tamaño de "BIENVENIDO A" */
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+}
+
+.hero-content h2 {
+  font-size: 6.0em; /* Ajusta el tamaño de "CAFE EL MEJOR" */
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #52210e; /* Color café  */
+  
+}
+
+.hero-content h3 {
+  font-size: 4em; /* Ajusta el tamaño de "Cafe y postres" */
+  margin: 0;
+  font-family: "Yellowtail", cursive;
+  font-style: normal; 
+  color: #fff;
+ 
+}
+
+.hero-button {
+  background-color: #b84d23; /* Color naranja del botón "Start Your Slide" */
+  color: #fff;
+  padding: 12px 25px; /* Ajusta el padding del botón */
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1em;
+  font-weight: bold; /* texto en negrita */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 25px; /* Ajustar el espacio superior del botón */
+}
+
+.hero-button:hover {
+  background-color: #E67E22; /* Un tono más oscuro al pasar el mouse */
+}
