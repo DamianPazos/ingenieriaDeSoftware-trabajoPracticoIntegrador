@@ -8,7 +8,7 @@ export const createOrdenCompra = (
     callback: (err: any, results: any) => void
 ) => {
     const query = `
-        INSERT INTO ordenCompra (idProveedor, fecha)
+        INSERT INTO ordenesDeCompra (idProveedor, fecha)
         VALUES (?, ?)
     `;
     const data = [
@@ -28,7 +28,7 @@ export const getOrdenCompraById = (
     idOrdenCompra: number,
     callback: (err: any, results: any) => void
 ): void => {
-    const query = `SELECT * FROM ordenCompra WHERE idOrdenCompra = ?`;
+    const query = `SELECT * FROM ordenesDeCompra WHERE idOrdenCompra = ?`;
 
     bd.query(query, [idOrdenCompra], (err, results) => {
         if (err) {
@@ -44,7 +44,7 @@ export const getOrdenCompraById = (
 export const getAllOrdenesCompra = (
     callback: (err: any, results: any) => void
 ): void => {
-    const query = `SELECT * FROM ordenCompra`;
+    const query = `SELECT * FROM ordenesDeCompra`;
 
     bd.query(query, (err, results) => {
         if (err) {
@@ -82,7 +82,7 @@ export const updateOrdenCompra = (
     }
 
     const query = `
-        UPDATE ordenCompra
+        UPDATE ordenesDeCompra
         SET ${fields.join(", ")}
         WHERE idOrdenCompra = ?
     `.trim();
@@ -110,7 +110,7 @@ export const deleteOrdenCompra = (
     idOrdenCompra: number,
     callback: (err: any, results: any) => void
 ) => {
-    const query = `DELETE FROM ordenCompra WHERE idOrdenCompra = ?`;
+    const query = `DELETE FROM ordenesDeCompra WHERE idOrdenCompra = ?`;
 
     bd.query(query, [idOrdenCompra], (err, results) => {
         if (err) {
