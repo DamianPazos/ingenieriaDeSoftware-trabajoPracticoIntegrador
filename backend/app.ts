@@ -4,6 +4,8 @@ import cors from 'cors';
 import proveedorRoutes from './routes/proveedorRoutes';
 import productoRoutes from './routes/productoRoutes';
 import clienteRoutes from './routes/clienteRoutes';
+import formaCobranzaRoutes from './routes/formaCobranzaRoutes';
+import ordenComprasRoutes from './routes/ordenCompraRoutes';
 
 dotenv.config();
 
@@ -17,6 +19,8 @@ app.use(express.json()); // Para parsear JSON en los request
 app.use('/api', proveedorRoutes);
 app.use('/api', productoRoutes);
 app.use('/api', clienteRoutes);
+app.use('/api', formaCobranzaRoutes);
+app.use('/api', ordenComprasRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
