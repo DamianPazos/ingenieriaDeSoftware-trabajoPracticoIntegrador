@@ -36,7 +36,7 @@
   padding: 2%;
   margin: 0;
   display: flex;
-  gap: 35px; /* Reduce un poco el espacio entre los enlaces */
+  gap: 60px; /* Reduce un poco el espacio entre los enlaces */
 }
 
 .client-navbar__right .nav-links li a {
@@ -50,6 +50,30 @@
 .client-navbar__right .nav-links li a:hover {
   color: #52210e; /* Color café para el hover */
 }
+
+/* Estilos para el ícono del carrito */
+.cart-icon-container {
+    margin-left: 18px; /* <-- Espacio a la izquierda del carrito, respecto al último link */
+    display: flex; /* Para centrar el ícono */
+    align-items: center;
+    margin-right: 10%;
+    cursor: pointer; /* Indica que es clickeable */
+    position: relative;
+}
+
+.cart-icon {
+    height: 45px; /* Ajusta el tamaño del ícono*/
+    width: 100%;
+    color: #333333; 
+    font-size: 1.9em; /* Para Font Awesome */
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #52210e; /* Color al pasar el mouse */
+}
+
+
 
 /* Estilos Responsive*/
 @media (max-width: 768px) {
@@ -73,4 +97,9 @@
     justify-content: center;
     gap: 10px; /* Reduce el espacio entre enlaces en móvil */
   }
+
+  .cart-icon-container {
+        margin-left: 0; /* Elimina el margen lateral en móvil */
+        margin-top: 10px; /* Añade un pequeño margen superior si es necesario */
+    }
 }

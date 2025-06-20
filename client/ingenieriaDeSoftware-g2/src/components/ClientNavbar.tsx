@@ -20,6 +20,13 @@ function ClientNavbar() {
           <li><Link to="/menu">Menú</Link></li> {}
           <li><Link to="/login">Iniciar sesión</Link></li> {/* Esta ruta es :LoginPage */}
         </ul>
+        <div className="cart-icon-container">
+
+          {}
+          <img src="/public/cart-icon.png" alt="Carrito de compras" className="cart-icon" />
+          {}
+          {}
+        </div>
       </nav>
     </header>
   );
