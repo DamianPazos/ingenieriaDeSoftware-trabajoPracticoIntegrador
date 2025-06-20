@@ -6,6 +6,8 @@ import productoRoutes from './routes/productoRoutes';
 import clienteRoutes from './routes/clienteRoutes';
 import formaCobranzaRoutes from './routes/formaCobranzaRoutes';
 import ordenComprasRoutes from './routes/ordenCompraRoutes';
+import detalleOrdenComprasRoutes from './routes/detalleOrdenCompraRoutes';
+import cobranzaRoutes from './routes/cobranzaRoutes';
 
 dotenv.config();
 
@@ -21,6 +23,8 @@ app.use('/api', productoRoutes);
 app.use('/api', clienteRoutes);
 app.use('/api', formaCobranzaRoutes);
 app.use('/api', ordenComprasRoutes);
+app.use('/api', detalleOrdenComprasRoutes);
+app.use('/api', cobranzaRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
